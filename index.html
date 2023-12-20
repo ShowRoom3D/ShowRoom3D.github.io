@@ -54,31 +54,25 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            We introduce ShowRoom3D, a three-stage approach for
+            generating high-quality 3D room-scale scenes from texts.
+            Previous methods using 2D diffusion priors to optimize neu-
+            ral radiance fields for generating room-scale scenes have
+            shown unsatisfactory quality. This is primarily attributed to
+            the limitations of 2D priors lacking 3D awareness and con-
+            straints in the training methodology. In this paper, we utilize a 3D diffusion prior, MVDiffusion, to optimize the 3D room-
+            scale scene. Our contributions are in two aspects. Firstly,
+            we propose a progressive view selection process to optimize
+            NeRF. This involves dividing the training process into three
+            stages, gradually expanding the camera sampling scope.
+            Secondly, we propose the pose transformation method in
+            the second stage. It will ensure MVDiffusion provide the
+            accurate view guidance. As a result, ShowRoom3D enables
+            the generation of rooms with improved structural integrity,
+            enhanced clarity from any view, reduced content repetition, and higher consistency across different perspectives. Exten-
+            sive experiments demonstrate that our method, significantly
+            outperforms state-of-the-art approaches by a large margin
+            in terms of user study.
           </p>
         </div>
       </div>
